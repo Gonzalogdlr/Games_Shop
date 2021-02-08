@@ -9,8 +9,23 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <header>
+      <div class = "loggin">
+        <% if current_user%>
+        <h3>
+          Logged as, <%= link_to current_user.name, edit_user_registration_path %> 
+        </h3>
+        <h3>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+        </h3>
+        <%else%>
+        <h3 >
+        <%= link_to 'Sign in', new_user_session_path  %>
+        </h3> 
+        <%end%>
+      </div>
+    </header>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

@@ -1,0 +1,11 @@
+.loggin {
+  display: flex;
+  justify-content: space-around;
+  background-color: midnightblue;
+  height: 50px;
+  align-items: center;
+  & h3{
+    color: white;
+  }
+  
+}
