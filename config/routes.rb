@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :games
+  get 'games/index'
+  get 'games/edit'
+  get 'games/show'
+  get 'games/new'
+  get 'games/_form'
   devise_for :users, controllers: {
     registrations: 'registrations'
   }
