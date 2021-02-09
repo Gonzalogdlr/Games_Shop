@@ -4,5 +4,15 @@ h1, h2, h3, h4, h5, p {
 }
 a{
   text-decoration: none;
-  color: yellow;
+  color: red;
+}
+.loggin {
+  display: flex;
+  justify-content: space-around;
+  background-color: midnightblue;
+  height: 50px;
+  align-items: center;
+  & h3{
+    color: white;
+  }
 }
